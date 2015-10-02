@@ -14,7 +14,7 @@ public class HibernateTest {
 		//user.setUserId(2);
 //		user.setName("FirstUser");
 //		user.setUsername("LittleBaby");
-//		user.setAdmin("admin");
+		user.setAdmin("admin");
 //		user.setPassword("1234");
 //		user.setCreatedAt("2012-10-23 23:59");
 		//Posts post = new Posts(1,1,"jfflsflslksklf","2012-10-23 23:59");
