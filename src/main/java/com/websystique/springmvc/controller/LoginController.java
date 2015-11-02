@@ -30,21 +30,22 @@ public class LoginController {
 	@RequestMapping(value = { "/userCheck" }, method = RequestMethod.POST)
 	public String userCheck(ModelMap model, HttpServletRequest request,HttpSession session ) {
 		String username = request.getParameter("username");
+		String pass = request.getParameter("pwd");
 		User user = service.findUserByUsername(username);
 		logger.error("Login beggins");
-		//model.addAttribute("name", user.getUsername());
 		
-		try {
-			if (!(user.getUsername().equals(null))
-					&& !(user.getPassword().equals(null))) {
+		
+			if(user.getPassword().equals(pass)){ 
+			
 						session.setAttribute("currUser", user);					
 												
 			}
-		} catch (Exception e) {
-			model.addAttribute("message", "Username or password is wrong");
+			else{
+				model.addAttribute("message", "Username or password is wrong");
 
-			return "/login";
-		}
+				return "/login";
+			}
+		
 		
 		
 		return "redirect:/myPosts";	

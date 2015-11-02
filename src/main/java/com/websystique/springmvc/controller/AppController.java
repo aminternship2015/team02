@@ -59,8 +59,7 @@ public class AppController {
 		}
 
 		model.addAttribute("username", user.getUsername());
-
-		List<Post> posts = postService.findAllPosts();
+		List<Post> posts = postService.findAllPosts(user.getUsername());
 		model.addAttribute("posts", posts);
 		model.addAttribute("postLen", posts.size());
 

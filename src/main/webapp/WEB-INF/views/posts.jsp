@@ -115,10 +115,19 @@
 				<div class="col-md-3 col-sm-5">
 					<div class="sidebar blog-sidebar">
 						<div class="sidebar-item  recent">
-							<img width="262" height="287"
-								src="${avatar}"
-								class="img-responsive" alt="">
-
+							
+							<c:choose>
+  <c:when test="${empty avatar}">
+    <img width="262" height="287" src="resources/images/user.png"
+								class="img-responsive"> 
+  </c:when>
+	<c:otherwise>						
+							<img width="262" height="287" src="${avatar}"
+								class="img-responsive"> 
+						
+    
+  </c:otherwise>
+</c:choose>
 
 						</div>
 						<div class="sidebar-item categories">

@@ -7,22 +7,21 @@ import com.websystique.springmvc.model.User;
 
 public interface PostService {
 	public Post findById(int id);
-	
-	void savePost(Post post);
-	
-	void updatePost(Post post);
 
-	List<Post> findAllPosts();
+	void savePost(Post post);
+
+	void updatePost(Post post);
 	
+	List<Post> AllPosts();
+
+	List<Post> findAllPosts(String username);
+
 	public int findMaxId();
-	
+
 	public int countPosts();
-	
-	List<Post> findPostsForPage(int page);
-	
-	//public List<Post> limitTenPosts(int begin,int end);
-	
+
+	List<Post> findPostsForPage(int page, String currUser);
+
 	void deletePostById(int idPost);
-	
-	
+
 }

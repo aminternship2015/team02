@@ -9,13 +9,14 @@ public interface PostDao {
 
 	void savePost(Post post);
 
-	List<Post> findAllPosts();
+	List<Post> AllPosts();
+	List<Post> findAllPosts(String username);
 	
 	public int findMaxId();
 	
 	public int countPosts();
 	
-	List<Post> findPostsForPage(int page);
+	List<Post> findPostsForPage(int page, String currUser);
 	
 	void deletePostById(int idPost);
 	

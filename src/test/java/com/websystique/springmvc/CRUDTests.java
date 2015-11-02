@@ -39,7 +39,7 @@ public class CRUDTests extends Assert {
 		userEx.setEmail("bunny@mail.com");
 		userEx.setCreatedAt(new LocalDate(2015, 10, 15));
 		userEx.setAdmin("bunny");
-		userEx.setAvatar("bunny");
+		userEx.setAvatar("");
 	}
 
 	@Test
@@ -59,16 +59,16 @@ public class CRUDTests extends Assert {
 	@Test
 	public void testFindAllUsers() {
 		int totalNumber = userDao.findAllUsers().size();
-		assertEquals(6, totalNumber);
+		assertEquals(16, totalNumber);
 		return;
 	}
 	
 	@Test
 	public void testDeleteUserByUsername(){
-		User user = userDao.findUserByUsername("joker");
+		User user = userDao.findUserByUsername("Post");
 		if(user!=null){
-			userDao.deleteUserByUsername("joker");
-			user = userDao.findUserByUsername("joker");
+			userDao.deleteUserByUsername("Post");
+			user = userDao.findUserByUsername("Post");
 			assertNull("Object should not exist", user);
 		}
 		

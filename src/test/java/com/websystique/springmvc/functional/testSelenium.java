@@ -83,11 +83,11 @@ public class testSelenium {
 		WebElement submit = driver.findElement(By.id("register"));
 
 		name.clear();
-		name.sendKeys("useryy");
+		name.sendKeys("useryyy");
 		username.clear();
-		username.sendKeys("useryy");
+		username.sendKeys("useryyy");
 		password.clear();
-		password.sendKeys("useryy");
+		password.sendKeys("useryyy");
 		email.clear();
 		email.sendKeys(generatedUserEmail);
 		avatar.clear();

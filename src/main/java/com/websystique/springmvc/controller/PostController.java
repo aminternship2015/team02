@@ -54,12 +54,13 @@ public class PostController {
 		{
 			LOGGER.info("[LOGGER INFO] User " + username + " logged in");
 			LOGGER.info("User is trying to make a new post");
-
+			
 			user = (User) session.getAttribute("currUser");
 			model.addAttribute("username", user.getUsername());
 			model.addAttribute("avatar", user.getAvatar());
-
-			List<Post> posts = postService.findPostsForPage(page);
+			LOGGER.info("[AVATAR:] "+user.getAvatar());
+			
+			List<Post> posts = postService.findPostsForPage(page, user.getUsername());
 
 			int postLength = posts.size();
 			LOGGER.info("[LOGGER INFO] POST LENGTH: " + postLength);
@@ -120,7 +121,7 @@ public class PostController {
 		Post post = postService.findById(id);
 		model.addAttribute("post",post);
 		
-		List<Post> posts = postService.findAllPosts();
+		List<Post> posts = postService.findAllPosts(username);
 		
 		model.addAttribute("posts", posts);
 		model.addAttribute("postLen",posts.size());

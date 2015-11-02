@@ -16,8 +16,8 @@ public class PostServiceImpl implements PostService {
 
 	@Autowired
 	private PostDao postDao;
-	
-	public Post findById(int id){
+
+	public Post findById(int id) {
 		return postDao.findById(id);
 	}
 
@@ -25,8 +25,12 @@ public class PostServiceImpl implements PostService {
 		postDao.savePost(post);
 	}
 
-	public List<Post> findAllPosts() {
-		return postDao.findAllPosts();
+	public List<Post> findAllPosts(String username) {
+		return postDao.findAllPosts(username);
+	}
+	
+	public List<Post> AllPosts(){
+		return postDao.AllPosts();
 	}
 
 	public int findMaxId() {
@@ -37,20 +41,20 @@ public class PostServiceImpl implements PostService {
 		return postDao.countPosts();
 	}
 
-	public List<Post> findPostsForPage(int page) {
-		return postDao.findPostsForPage(page);
+	public List<Post> findPostsForPage(int page, String currUser) {
+		return postDao.findPostsForPage(page, currUser);
 	}
 
 	public void updatePost(Post post) {
 		Post entity = postDao.findById(post.getPostId());
 		if (entity != null) {
 			entity.setPostText(post.getPostText());
-			//entity.setCreatedAt(post.getCreatedAt());	
+			// entity.setCreatedAt(post.getCreatedAt());
 		}
-		
+
 	}
-	
-	public void deletePostById(int idPost){
+
+	public void deletePostById(int idPost) {
 		postDao.deletePostById(idPost);
 	}
 }
