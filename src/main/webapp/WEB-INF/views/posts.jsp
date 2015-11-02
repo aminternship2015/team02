@@ -134,7 +134,7 @@
 
 							<ul class="nav navbar-stacked">
 								<li><a href="showMyPosts">Tweets<span
-										class="pull-right">(1)</span></a></li>
+										class="pull-right">(${pSize})</span></a></li>
 								<li><a href="#">Following<span class="pull-right">(8)</span></a></li>
 								<li><a href="#">Followers<span class="pull-right">(4)</span></a></li>
 

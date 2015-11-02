@@ -59,7 +59,7 @@ public class CRUDTests extends Assert {
 	@Test
 	public void testFindAllUsers() {
 		int totalNumber = userDao.findAllUsers().size();
-		assertEquals(16, totalNumber);
+		assertEquals(17, totalNumber);
 		return;
 	}
 	

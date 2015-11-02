@@ -67,6 +67,7 @@ public class PostController {
 
 			model.addAttribute("page", page);
 			model.addAttribute("posts", posts);
+			model.addAttribute("pSize", posts.size());
 			model.addAttribute("total", postService.countPosts() / 10 + 2);
 
 		} else {
