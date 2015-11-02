@@ -121,12 +121,12 @@
     <img width="262" height="287" src="resources/images/user.png"
 								class="img-responsive"> 
   </c:when>
-	<c:otherwise>						
+	 <c:when test="${not empty avatar}">					
 							<img width="262" height="287" src="${avatar}"
 								class="img-responsive"> 
 						
     
-  </c:otherwise>
+   </c:when>
 </c:choose>
 
 						</div>
