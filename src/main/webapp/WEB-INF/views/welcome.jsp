@@ -84,14 +84,40 @@
         <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
     </section>
     <!--/#home-slider-->
-
-	
-	 <div class="col-sm-12 text-center bottom-separator">
-                    <img src="resources/images/home/under.png" class="img-responsive inline" alt="">
+     <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <img src="resources/images/home/cycle.png" alt="" width="120" height="85">
+                        </div>
+                        <h2>Talkers have always ruled.</h2>
+                        <p>They will continue to rule. The smart thing is to join them.</p>
+                    </div>
                 </div>
-   <!-- <img src="resources/images/404-bg.png" width="100%" height="40%"> -->
-
-   
+                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
+                            <img src="resources/images/home/clients.png" alt="" width="80" height="85">
+                        </div>
+                        <h2>Be a leader</h2>
+                        <p>The art of communication is the language of leadership.</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
+                            <img src="resources/images/home/tour-icon1.png" alt="" width="80" height="85">
+                        </div>
+                        <h2>Live, Laugh, Write</h2>
+                        <p>Humor is the affectionate communication of insight.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/#services-->
     <!--/#footer-->
 
  
