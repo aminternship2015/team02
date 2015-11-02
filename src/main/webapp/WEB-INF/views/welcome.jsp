@@ -85,7 +85,7 @@
     </section>
     <!--/#home-slider-->
 
-    <img src="resources/images/footer2.png" width="100%" height="40%">
+    <img src="resources/images/404-bg.png" width="100%" height="40%">
 
    
     <!--/#footer-->
