@@ -87,7 +87,7 @@
 
 	
 	 <div class="col-sm-12 text-center bottom-separator">
-                    <img src="images/home/under.png" class="img-responsive inline" alt="">
+                    <img src="resources/images/home/under.png" class="img-responsive inline" alt="">
                 </div>
    <!-- <img src="resources/images/404-bg.png" width="100%" height="40%"> -->
 
